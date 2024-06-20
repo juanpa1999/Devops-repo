@@ -1,0 +1,97 @@
+.dashboard-layout {
+  margin: 0% 1% 1% 1%;
+}
+
+.graph-container {
+  border-radius: 15px;
+  margin: 1%;
+  padding: 1%;
+  background-color: white;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.chart-data-box, .graph-container {
+  flex: 1 1 10%; /* Permite que ambos elementos intenten ocupar la mitad del contenedor */
+}
+
+/* Asegúrate de que chart-data-box tome todo el ancho cuando se envuelva */
+.chart-data-box {
+  min-width: 20%;
+}
+
+.space{
+  height: 10px;
+}
+
+.humedad-box, .weight-box, .temperature-box{
+  border-radius:3px;
+  flex-wrap: wrap;
+  /*border:2px solid #ffb800;*/
+  background-color: #c2ebd2;
+  color:#0cb14a;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 80px;
+  font-size: x-large;
+  margin:2px;
+}
+
+.temperature-box{
+  background-color: #ffedbf;
+  color:#ffb800;
+}
+
+.weight-box{
+  border-radius:3px;
+  /*border:2px solid #ffb800;*/
+  background-color: #ffe3bf;
+  color:#ff9100;
+}
+.temperature-box p, .humedad-box p, .weight-box p {
+  color:black;
+  font-size: small;
+  margin-right: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.bold{
+  font-weight: bold;
+}
+
+.value, .unit{
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  align-items: center;
+  font-size: 20px;
+}
+
+.unit{
+  margin-left: 10px;
+  font-weight: normal;
+}
+
+
+
+
+@media (max-width: 700px) {
+  .chart-data-box, .graph-container {
+    flex: 1 0 100%; /* Cambia ambos a 100% bajo ciertas condiciones */
+  }
+  .chart-graphic{
+    width: 100% !important;
+  }
+
+  .humedad-box, .weight-box, .temperature-box{
+    height: 60px;
+  }
+  .bold{
+    margin-top: 10px;
+  }
+}
