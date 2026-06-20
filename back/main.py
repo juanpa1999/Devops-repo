@@ -21,7 +21,8 @@ origins = [
     "http://localhost:3000",
     "https://create-react-app-site-production-def0.up.railway.app",
     "https://react-front-refoenergy-production.up.railway.app",
-    config("NGROK")
+    config("NGROK"),
+    ¨*¨
 ]
 
 # Configure CORS
