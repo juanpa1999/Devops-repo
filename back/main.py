@@ -16,13 +16,15 @@ async def app_lifespan(app: FastAPI):
  
 app = FastAPI(lifespan=app_lifespan)
 app.include_router(api_router)
-
+ 
 origins = [
     "http://localhost:3000",
     "https://create-react-app-site-production-def0.up.railway.app",
     "https://react-front-refoenergy-production.up.railway.app",
     config("NGROK"),
-    ¨*¨
+    "http://localhost",
+    "http://localhost/api",
+    "http://pablodevops.com/"
 ]
 
 # Configure CORS
@@ -33,4 +35,3 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-

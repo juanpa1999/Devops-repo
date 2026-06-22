@@ -15,13 +15,10 @@ docker network connect dnet back_cont
 docker stop back_cont
 docker start back_cont
 
-docker exec -it back_cont alembic init alembic
-docker exec -it back_cont alembic revision --autogenerate
+
 docker exec -it back_cont alembic upgrade head
 
 
 cd ../front
 docker build -t front_img .
-docker run -d --name front_cont -p 3000:3000 -v "$PWD:/usr/src/app" front_img
-docker stop front_cont
-docker start front_cont
+docker run -d --name front_cont -p 3000:3000 front_img
